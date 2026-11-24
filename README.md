@@ -1,8 +1,8 @@
 # Ridiculous at First Glance, Real by the Second
 
-![Competition](https://make.fun/badge/u-po-pu-ridiculous-at-first-glance-real-by-the-second-9a97d12a.svg)
-![Rank](https://make.fun/badge/AbralDevv/ridiculous-first-glance-20261124/rank.svg)
-![Reward](https://make.fun/badge/AbralDevv/ridiculous-first-glance-20261124/reward.svg)
+[![make.fun · u-po-pu-ridiculous-at-first-glance-real-by-the-second-9a97d12a](https://make.fun/badge/u-po-pu-ridiculous-at-first-glance-real-by-the-second-9a97d12a.svg)](https://make.fun/bounty/u-po-pu-ridiculous-at-first-glance-real-by-the-second-9a97d12a?utm_source=github&utm_medium=readme&utm_campaign=u-po-pu-ridiculous-at-first-glance-real-by-the-second-9a97d12a)
+[![rank](https://make.fun/badge/u-po-pu-ridiculous-at-first-glance-real-by-the-second-9a97d12a/AbralDevv/ridiculous-first-glance-20261124/rank.svg)](https://make.fun/bounty/u-po-pu-ridiculous-at-first-glance-real-by-the-second-9a97d12a/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=u-po-pu-ridiculous-at-first-glance-real-by-the-second-9a97d12a)
+[![reward](https://make.fun/badge/u-po-pu-ridiculous-at-first-glance-real-by-the-second-9a97d12a/AbralDevv/ridiculous-first-glance-20261124/reward.svg)](https://make.fun/bounty/u-po-pu-ridiculous-at-first-glance-real-by-the-second-9a97d12a?utm_source=github&utm_medium=readme&utm_campaign=u-po-pu-ridiculous-at-first-glance-real-by-the-second-9a97d12a)
 
 Entry for the make.fun competition **"Ridiculous at First Glance, Real by the Second"**
 (`u-po-pu-ridiculous-at-first-glance-real-by-the-second-9a97d12a`).
