@@ -11,5 +11,12 @@ const ENTRY =
 // Output dir: first argv, else OUTPUT_DIR env, else the competition default.
 const outDir = process.argv[2] ?? process.env.OUTPUT_DIR ?? "/output";
 
+// The competition requires 1–200 chars in a single sentence: refuse to
+// write anything that breaks the rule instead of submitting it silently.
+if (ENTRY.length < 1 || ENTRY.length > 200) {
+  throw new Error(`entry must be 1-200 chars, got ${ENTRY.length}`);
+}
+
 mkdirSync(outDir, { recursive: true });
 writeFileSync(join(outDir, "entry.txt"), ENTRY + "\n", "utf8");
+console.log(`wrote ${ENTRY.length}-char entry to ${join(outDir, "entry.txt")}`);
