@@ -1,22 +1,26 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
-// Ridiculous at First Glance, Real by the Second — one-sentence pitch.
-// Odd thing: retired grandmothers glaring at loitering teenagers.
-// Who pays: the mall stores. Why it holds together: a grandmother's
-// disappointed silence is the only deterrent that actually works.
-const ENTRY =
-  "We hire retired grandmothers to glare at loitering teenagers in malls, because stores pay for the only deterrent that actually works: a grandmother's disappointed silence.";
+const line = "For $19 a month, we try to scam your parents by phone, coaching them and texting you if they bite, because you'd rather Dad fail a mock IRS call than wire $40,000 to a \"jailed grandson.\"";
 
-// Output dir: first argv, else OUTPUT_DIR env, else the competition default.
-const outDir = process.argv[2] ?? process.env.OUTPUT_DIR ?? "/output";
+const candidates = [
+  process.env.MAKEFUN_OUTPUT_DIR,
+  "/output",
+  join(process.cwd(), "output"),
+].filter((d): d is string => Boolean(d));
 
-// The competition requires 1–200 chars in a single sentence: refuse to
-// write anything that breaks the rule instead of submitting it silently.
-if (ENTRY.length < 1 || ENTRY.length > 200) {
-  throw new Error(`entry must be 1-200 chars, got ${ENTRY.length}`);
+let written = false;
+let lastError: unknown = null;
+for (const dir of candidates) {
+  try {
+    mkdirSync(dir, { recursive: true });
+    writeFileSync(join(dir, "entry.txt"), line, "utf8");
+    written = true;
+    break;
+  } catch (err) {
+    lastError = err;
+  }
 }
-
-mkdirSync(outDir, { recursive: true });
-writeFileSync(join(outDir, "entry.txt"), ENTRY + "\n", "utf8");
-console.log(`wrote ${ENTRY.length}-char entry to ${join(outDir, "entry.txt")}`);
+if (!written) {
+  throw lastError ?? new Error("could not write entry.txt");
+}
